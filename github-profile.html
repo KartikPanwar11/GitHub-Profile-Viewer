@@ -3,15 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Profile Viewer</title>
-    <link rel="stylesheet" href="github-profile.css">
+    <title>GitHub Profile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>GitHub Profile Viewer</h1>
-
-
-
-
-<script src="github-profile.js"></script>
+    <div class="container">
+        <div class="nav-bar">
+            <button id="backBtn" class="back-btn">← Search Again</button>
+        </div>
+        
+        <div id="loadingContainer" class="loading-container">
+            <div class="spinner large"></div>
+            <p>Loading profile...</p>
+        </div>
+        
+        <div id="errorContainer" class="error-container hidden">
+            <div class="error-content">
+                <h2>User Not Found</h2>
+                <p id="errorText">The GitHub user could not be found.</p>
+                <button id="tryAgainBtn" class="btn">Try Again</button>
+            </div>
+        </div>
+        
+        <div id="profileContainer" class="profile-container hidden">
+            <!-- User Info Section -->
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img id="userAvatar" src="" alt="User Avatar">
+                </div>
+                <div class="user-details">
+                    <h1 id="userName"></h1>
+                    <p id="userLogin" class="user-login"></p>
+                    <p id="userBio" class="user-bio"></p>
+                    <div class="user-meta">
+                        <span id="userLocation" class="meta-item"></span>
+                        <span id="userCompany" class="meta-item"></span>
+                        <span id="userWebsite" class="meta-item"></span>
+                        <span id="userJoined" class="meta-item"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" id="repoCount">0</span>
+                    <span class="stat-label">Repositories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="followerCount">0</span>
+                    <span class="stat-label">Followers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="followingCount">0</span>
+                    <span class="stat-label">Following</span>
+                </div>
+            </div>
+            
+            <!-- Repositories Section -->
+            <div class="repos-section">
+                <h2>Popular Repositories</h2>
+                <div id="reposContainer" class="repos-container">
+                    <!-- Repositories will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="profile.js"></script>
 </body>
 </html>

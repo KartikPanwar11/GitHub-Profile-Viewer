@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background:#EADDCA;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+}
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.form{
+    background: #CAD7EA;
+    border: solid black 0.5px;
+    padding:5rem;
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+    margin: 3rem;
+    text-align: center;
+}
+
+.username{
+
+}
